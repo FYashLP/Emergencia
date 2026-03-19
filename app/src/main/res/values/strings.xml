@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Emergencia</string>
+    <string name="Welcomer">Bem-vindo!</string>
+    <string name="Version">Emergência v1.0</string>
+    <string name="PM">190 - Policia Militar (PM)</string>
+    <string name="PRF">191 - Policia Rodoviária Federal (PRF)</string>
+    <string name="PRE">198 - Policia Rodoviária Estadual (PRE)</string>
+    <string name="SAMU">192 - Serviço de Atendimento Móvel Urgente (SAMU)</string>
+    <string name="CB">193 - Corpo de Bombeiros</string>
+    <string name="DC">199 - Defesa Civil</string>
+    <string name="CAM">180 - Central de Atendimento a Mulher</string>
+    <string name="DDH">100 - Disque Direitos Humanos</string>
+    <string name="PROCON">151 - Programa de Prot. e Def. do Consumidor (PROCON)</string>
+    <string name="CVV">141 - Centro de Valorização da Vida</string>
+    <string name="Disclaimer">Acionar serviços de emergência sem necessidade real é crime (Art. 266 do Código Penal) podendo levar a detenção de 1 a 3 anos e multa. Use apenas em situações reais.\nUm simples trote pode custar uma vida.</string>
+    <string name="Finder">Onde estou?</string>
+    <string name="Caller">Ligar</string>
 </resources>
