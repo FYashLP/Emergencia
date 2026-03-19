@@ -26,16 +26,16 @@ class DetailsActivity : AppCompatActivity() {
 
         val service = intent.getStringExtra("service")
         val infos = intent.getStringExtra("infos")
-        val numero = service?.substringBefore(" ")?.trim()
+        val numero = service?.substring(0,3)
 
         findViewById<android.widget.TextView>(R.id.Service).text = service
         findViewById<android.widget.TextView>(R.id.Infos).text = infos
 
         val call = findViewById<Button>(R.id.Call)
         call.setOnClickListener {
-            val intent = Intent(Intent.ACTION_DIAL)
-            intent.data = "tel:$numero".toUri()
-            startActivity(intent)
+            val dialIntent = Intent(Intent.ACTION_DIAL)
+            dialIntent.data = "tel:$numero".toUri()
+            startActivity(dialIntent)
         }
 
     }

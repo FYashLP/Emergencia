@@ -33,13 +33,14 @@
 
     <TextView
         android:id="@+id/Infos"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="@id/Service"
         app:layout_constraintTop_toBottomOf="@id/Service"
+        app:layout_constraintEnd_toStartOf="@id/Back"
         android:layout_marginTop="25dp"
         android:textSize="15sp"
-        android:text="Infos\nfill\nfill\nfill\nfill\nfill\nfill\nfill\nfill\nfill\nfill\nfill\nfill\nfill\nfill\nfill\nfill" />
+        android:text="Infos" />
 
     <Button
         android:id="@+id/Call"
