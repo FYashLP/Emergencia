@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Emergencia</string>
     <string name="Welcomer">Bem-vindo!</string>
-    <string name="Version">Emergência v2.1</string>
+    <string name="Version">Emergência v3.0</string>
     <string name="PM">190 - Policia Militar (PM)</string>
     <string name="PRF">191 - Policia Rodoviária Federal (PRF)</string>
     <string name="PRE">198 - Policia Rodoviária Estadual (PRE)</string>
