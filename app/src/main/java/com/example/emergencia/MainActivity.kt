@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.net.toUri
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
@@ -24,7 +23,8 @@ class MainActivity : AppCompatActivity() {
         pm.setOnClickListener {
             val intent = Intent(this, DetailsActivity::class.java)
             intent.putExtra("service", getString(R.string.PM))
-            intent.putExtra("infos", "Para crimes como;\n\n- Crimes em andamento\n- Violência domestica\n- Pertubação de ordem publica\n- Ameaças e intimidações\n- Acidentes em vias urbanas") ///sera que tem como bota o embed do decibel aqui??
+            intent.putExtra("infos1", "- Crimes em andamento\n- Violência doméstica\n- Perturbação da ordem pública\n- Ameaças e intimidações\n- Acidentes em vias urbanas")
+            intent.putExtra("infos2", "- Localização exata\n- O que está acontecendo\n- Se há feridos ou armas\n- Descrição de suspeito(s)\n\nNão desligue até o atendente liberar\nMantenha a calma e fale claramente")
             startActivity(intent)
         }
 
@@ -32,7 +32,8 @@ class MainActivity : AppCompatActivity() {
         prf.setOnClickListener {
             val intent = Intent(this, DetailsActivity::class.java)
             intent.putExtra("service", getString(R.string.PRF))
-            intent.putExtra("infos", "Para situações como;\n\n- Acidentes em rodovias federais (Ex; BR-116/BR-230/BR-101 etc...) \n- Veículos cometendo Infrações ou em estado irregular em trânsito\n- Animais em pista ou análogos")
+            intent.putExtra("infos1", "- Acidentes em rodovias federais (BR-116, BR-230, etc)\n- Infrações graves em rodovias federais\n- Veículos suspeitos ou irregulares\n- Animais na pista")
+            intent.putExtra("infos2", "- Nome da rodovia e KM aproximado\n- Sentido (ex: sentido Fortaleza)\n- Número de veículos e feridos\n- Se há risco de novo acidente\n\nNão mova feridos graves sem orientação\nAcenda o pisca-alerta e coloque o triângulo a pelo menos 30 metros do veículo.")
             startActivity(intent)
         }
 
@@ -40,7 +41,8 @@ class MainActivity : AppCompatActivity() {
         pre.setOnClickListener {
             val intent = Intent(this, DetailsActivity::class.java)
             intent.putExtra("service", getString(R.string.PRE))
-            intent.putExtra("infos", "Para situações como;\n\n- Acidentes em rodovias estaduais (Ex; CE-060/CE-187/SP-330 etc...) \n- Veículos cometendo Infrações ou em estado irregular em trânsito\n- Animais em pista ou análogos")
+            intent.putExtra("infos1", "- Acidentes em rodovias estaduais (CE-060, CE-187, etc)\n- Infrações graves em rodovias estaduais\n- Veículos suspeitos ou irregulares\n- Animais na pista")
+            intent.putExtra("infos2", "- Nome da rodovia e KM aproximado\n- Número de veículos e feridos\n- Se há risco de novo acidente\n\nNão mova feridos graves sem orientação\nAcenda o pisca-alerta e coloque o triângulo a pelo menos 30 metros do veículo")
             startActivity(intent)
         }
 
@@ -48,7 +50,8 @@ class MainActivity : AppCompatActivity() {
         samu.setOnClickListener {
             val intent = Intent(this, DetailsActivity::class.java)
             intent.putExtra("service", getString(R.string.SAMU))
-            intent.putExtra("infos", "Para ocorrências como;\n\n- Acidentes domésticos graves\n- Ocorrência e suspeita de ataques cardiovasculares\n- Acidentes de trânsito com vítimas\n- Intoxicações e envenenamento por produtos ou animais\n- Trabalho de parto em risco")
+            intent.putExtra("infos1", "- Infarto ou AVC\n- Acidentes com feridos graves\n- Overdose ou intoxicação\n- Dificuldade respiratória grave\n- Trabalho de parto em risco")
+            intent.putExtra("infos2", "- Localização exata\n- Estado da vítima (consciente, respirando)\n- Idade aproximada\n- O que aconteceu\n\nNão mova a vítima sem orientação\nSiga todas as instruções do atendente até a equipe chegar")
             startActivity(intent)
         }
 
@@ -56,7 +59,8 @@ class MainActivity : AppCompatActivity() {
         cb.setOnClickListener {
             val intent = Intent(this, DetailsActivity::class.java)
             intent.putExtra("service", getString(R.string.CB))
-            intent.putExtra("infos", "Para situações como;\n\n- Incêndios fora de controle\n- Desabamento de estruturas\n- Resgates em locais de dificil acesso/ferragens/escombros\n- Vazamento de gases")
+            intent.putExtra("infos1", "- Incêndios fora de controle\n- Desabamentos\n- Afogamentos e resgates\n- Animais peçonhentos\n- Vazamento de gás")
+            intent.putExtra("infos2", "- Localização exata\n- Tipo e tamanho do incêndio\n- Se há pessoas presas\n- Se há risco de explosão\n\nEvacue o local antes de ligar se possível\nNão tente apagar incêndios grandes sozinho\nFeche portas para retardar o avanço das chamas se puder")
             startActivity(intent)
         }
 
@@ -64,7 +68,8 @@ class MainActivity : AppCompatActivity() {
         dc.setOnClickListener {
             val intent = Intent(this, DetailsActivity::class.java)
             intent.putExtra("service", getString(R.string.DC))
-            intent.putExtra("infos", "Para desastres como;\n\n- Enchentes e alagamentos\n- Deslizamentos de terra\n- Vendavais, tempestades e granizo intenso\n- Estruturas em estado instável")
+            intent.putExtra("infos1", "- Enchentes e alagamentos\n- Deslizamentos de terra\n- Vendavais e tempestades intensas\n- Estruturas em estado instável")
+            intent.putExtra("infos2", "- Localização exata\n- Tipo de ocorrência\n- Se há pessoas em risco imediato\n\nAfaste-se de áreas de risco imediatamente\nNão retorne ao local sem autorização ou liberação por autoridades\nFique atento a alertas do sistema de sirenes ou por sms do município\nEm ultimo caso, refugie-se em abrigos próximos")
             startActivity(intent)
         }
 
@@ -72,7 +77,8 @@ class MainActivity : AppCompatActivity() {
         cam.setOnClickListener {
             val intent = Intent(this, DetailsActivity::class.java)
             intent.putExtra("service", getString(R.string.CAM))
-            intent.putExtra("infos", "Para situações e indicios de;\n\n- Violência física ou psicológica\n- Ameaças, perseguição e importunação\n- Feminicídio em andamento\n- Denúncia anônima de agressão\n- também é recomendado denunciar para a PM nos mesmos casos")
+            intent.putExtra("infos1", "- Violência física ou psicológica\n- Ameaças e perseguição\n- Feminicídio em andamento\n- Denúncia anônima de agressão")
+            intent.putExtra("infos2", "- Sua localização se estiver em segurança\n- O tipo de violência sofrida\n- Se o agressor está no local\n\nA ligação pode ser feita anonimamente.\nEm perigo imediato ligue também para a PM (190).")
             startActivity(intent)
         }
 
@@ -80,7 +86,8 @@ class MainActivity : AppCompatActivity() {
         ddh.setOnClickListener {
             val intent = Intent(this, DetailsActivity::class.java)
             intent.putExtra("service", getString(R.string.DDH))
-            intent.putExtra("infos", "Para casos de;\n\n- Abuso de autoridade\n- Discriminação racial, social ou de gênero\n- Exploração de trabalho infantil\n- Condições de trabalho escravo\n- Maus tratos a crianças, adolescentes, deficientes e idosos")
+            intent.putExtra("infos1", "- Abuso de autoridade\n- Discriminação racial, social ou de gênero\n- Exploração de trabalho infantil\n- Trabalho escravo\n- Maus tratos a vulneráveis")
+            intent.putExtra("infos2", "- O tipo de violação\n- Local onde ocorreu\n- Dados do responsável se souber\n\nA denúncia pode ser feita anonimamente\nGuarde evidências como fotos, vídeos e documentos se puder")
             startActivity(intent)
         }
 
@@ -88,7 +95,8 @@ class MainActivity : AppCompatActivity() {
         procon.setOnClickListener {
             val intent = Intent(this, DetailsActivity::class.java)
             intent.putExtra("service", getString(R.string.PROCON))
-            intent.putExtra("infos", "Para casos de;\n\n- Fraudes em compras e vendas\n- Cobranças indevidas e abusivas\n- Propaganda enganosa\n- Recusa de atendimento e métodos de pagamento")
+            intent.putExtra("infos1", "- Fraudes em compras\n- Cobranças indevidas\n- Propaganda enganosa\n- Recusa de atendimento")
+            intent.putExtra("infos2", "- Nome da empresa\n- O que aconteceu e quando\n- Valor envolvido se houver\n\nGuarde todos os comprovantes, notas fiscais e conversas com a empresa\nO PROCON pode mediar acordos e aplicar multas administrativas\nExija o código de defesa do consumidor (CDC) ")
             startActivity(intent)
         }
 
@@ -96,7 +104,8 @@ class MainActivity : AppCompatActivity() {
         cvv.setOnClickListener {
             val intent = Intent(this, DetailsActivity::class.java)
             intent.putExtra("service", getString(R.string.CVV))
-            intent.putExtra("infos", "Para situações como;\n\n- Pensamentos e crise suicida\n- Sofrimento emocional intenso\n- Apoio em momentos de desespero\n- O serviço conta com escuta anônima e sigilosa")
+            intent.putExtra("infos1", "- Pensamentos suicidas\n- Sofrimento emocional intenso\n- Crise de ansiedade ou desespero\n- Apoio emocional em geral")
+            intent.putExtra("infos2", "O serviço é gratuito, anônimo, sigiloso e disponível 24 horas.\n\nVocê não precisa estar em crise para ligar.\nFalar sobre o que sente já é um passo importante\nSe preferir, o atendimento também está disponível pelo chat em cvv.org.br")
             startActivity(intent)
         }
 

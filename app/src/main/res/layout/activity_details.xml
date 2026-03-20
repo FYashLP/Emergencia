@@ -32,15 +32,50 @@
         app:layout_constraintBottom_toBottomOf="@id/Service"/>
 
     <TextView
-        android:id="@+id/Infos"
+        android:id="@+id/InfoHead1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="@id/Service"
         app:layout_constraintTop_toBottomOf="@id/Service"
         app:layout_constraintEnd_toStartOf="@id/Back"
         android:layout_marginTop="25dp"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:text="QUANDO ACIONAR:" />
+
+    <TextView
+        android:id="@+id/infos1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/Service"
+        app:layout_constraintTop_toBottomOf="@id/InfoHead1"
+        app:layout_constraintEnd_toStartOf="@id/Back"
         android:textSize="15sp"
-        android:text="Infos" />
+        android:text="Infos1"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/InfoHead2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/Service"
+        app:layout_constraintTop_toBottomOf="@id/infos1"
+        app:layout_constraintEnd_toStartOf="@id/Back"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:text="INFORME:"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:id="@+id/infos2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/Service"
+        app:layout_constraintTop_toBottomOf="@id/InfoHead2"
+        app:layout_constraintEnd_toStartOf="@id/Back"
+        android:textSize="15sp"
+        android:text="Infos2"
+        android:layout_marginTop="10dp"/>
 
     <Button
         android:id="@+id/Call"
