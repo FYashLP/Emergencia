@@ -3,13 +3,24 @@ package com.example.emergencia
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        // Bloco responsável em settar o tema escolhido nas configurações na criação da view principal
+        val prefs = getSharedPreferences("config", MODE_PRIVATE)
+        AppCompatDelegate.setDefaultNightMode(when (prefs.getInt("tema_index", 0)) {
+            1 -> AppCompatDelegate.MODE_NIGHT_NO // Modo diurno
+            2 -> AppCompatDelegate.MODE_NIGHT_YES // Modo Noturno
+            else -> AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM // Modo auto mediante do horário do dispositivo
+        })
+
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
@@ -19,14 +30,24 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        val pm = findViewById<Button>(R.id.PM)
+        // Bloco responsável por startar e encaminhar a view de configurações
+        val config = findViewById<ImageButton>(R.id.Config)
+        config.setOnClickListener {
+            val intent = Intent(this, ConfigActivity::class.java) // Direcionamento a view de configuração
+            startActivity(intent) // Roda a view de configuração
+        }
+
+        // Bloco para starta e encaminhar para a view de detalhes de serviço, aproveitando para repassar strings especificas a cada botão
+        val pm = findViewById<Button>(R.id.PM) // Linkando o botão a val a ser usada no listener
         pm.setOnClickListener {
-            val intent = Intent(this, DetailsActivity::class.java)
-            intent.putExtra("service", getString(R.string.PM))
+            val intent = Intent(this, DetailsActivity::class.java) // Direcionamento a view de detalhes
+            intent.putExtra("service", getString(R.string.PM)) // Manda para a view de destino do intent, no caso 3 sets de strings com tags diferentes, uma maneira de ter uma activity padronizada em vez de 10 views diferente para cada função
             intent.putExtra("infos1", "- Crimes em andamento\n- Violência doméstica\n- Perturbação da ordem pública\n- Ameaças e intimidações\n- Acidentes em vias urbanas")
             intent.putExtra("infos2", "- Localização exata\n- O que está acontecendo\n- Se há feridos ou armas\n- Descrição de suspeito(s)\n\nNão desligue até o atendente liberar\nMantenha a calma e fale claramente")
-            startActivity(intent)
+            startActivity(intent) // Roda a view de detalhes
         }
+
+        // basicamente todos os 9 blocos seguintes seguem a mesma lógica, denovo, para não ter varias views para a mesma coisa
 
         val prf = findViewById<Button>(R.id.PRF)
         prf.setOnClickListener {

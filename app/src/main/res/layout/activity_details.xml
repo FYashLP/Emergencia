@@ -7,11 +7,12 @@
     android:layout_height="match_parent"
     tools:context=".DetailsActivity">
 
+    <!-- Textview a receber a string service -->
     <TextView
         android:id="@+id/Service"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Placeholder"
+        android:text="Service"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toStartOf="@id/Back"
@@ -20,6 +21,7 @@
         android:textStyle="bold"
         android:textSize="16sp" />
 
+    <!-- Botão para voltar a main view -->
     <ImageButton
         android:id="@+id/Back"
         android:layout_width="36dp"
@@ -27,9 +29,10 @@
         android:layout_marginEnd="16dp"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:src="@drawable/arrow_back"
+        app:tint="?attr/colorOnBackground"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/Service"
-        app:layout_constraintBottom_toBottomOf="@id/Service"/>
+        app:layout_constraintBottom_toBottomOf="@id/Service" />
 
     <TextView
         android:id="@+id/InfoHead1"
@@ -43,6 +46,7 @@
         android:textSize="18sp"
         android:text="QUANDO ACIONAR:" />
 
+    <!-- Textview a receber a string infos1 -->
     <TextView
         android:id="@+id/infos1"
         android:layout_width="0dp"
@@ -66,6 +70,7 @@
         android:text="INFORME:"
         android:layout_marginTop="15dp" />
 
+    <!-- Textview a receber a string infos2 -->
     <TextView
         android:id="@+id/infos2"
         android:layout_width="0dp"
@@ -77,6 +82,7 @@
         android:text="Infos2"
         android:layout_marginTop="10dp"/>
 
+    <!-- Botão para o encaminhamento (trigger da função) da discagem -->
     <Button
         android:id="@+id/Call"
         android:layout_width="wrap_content"
@@ -84,11 +90,15 @@
         android:text="@string/Caller"
         android:layout_marginBottom="50dp"
         app:icon="@drawable/outline_call"
+        app:iconTint="?attr/colorOnBackground"
+        app:tint="?attr/colorOnBackground"
+        android:textColor="@color/material_on_background_emphasis_high_type"
         app:iconSize="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/Back"
         app:layout_constraintStart_toEndOf="@id/Local"/>
 
+    <!-- Botão para o uso (trigger da função) do GPS nativo/rede para a determinação do local do usuário -->
     <Button
         android:id="@+id/Local"
         android:layout_width="0dp"
@@ -96,6 +106,9 @@
         android:text="@string/Finder"
         android:layout_marginBottom="50dp"
         app:icon="@drawable/compass_callib"
+        app:iconTint="?attr/colorOnBackground"
+        app:tint="?attr/colorOnBackground"
+        android:textColor="@color/material_on_background_emphasis_high_type"
         app:iconSize="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@id/Service"

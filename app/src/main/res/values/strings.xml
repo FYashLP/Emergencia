@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">Emergencia</string>
+    <string name="app_name">Emergência</string>
     <string name="Welcomer">Bem-vindo!</string>
-    <string name="Version">Emergência v3.0</string>
+    <string name="Version">Emergência v4.0</string>
     <string name="PM">190 - Policia Militar (PM)</string>
     <string name="PRF">191 - Policia Rodoviária Federal (PRF)</string>
     <string name="PRE">198 - Policia Rodoviária Estadual (PRE)</string>
@@ -15,4 +15,4 @@
     <string name="Disclaimer">Acionar serviços de emergência sem necessidade real é crime (Art. 266 do Código Penal) podendo levar a detenção de 1 a 3 anos e multa. Use apenas em situações reais.\nUm simples trote pode custar uma vida.</string>
     <string name="Finder">Onde estou?</string>
     <string name="Caller">Ligar</string>
-    </resources>
+</resources>

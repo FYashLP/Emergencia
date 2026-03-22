@@ -7,11 +7,14 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- Textviews para cabeçalho, um como greeting e outro, o app tem um propósito mais utilitário,
+    então um design mais "seco" sem distrações parece mais apropriado, menos info desnecessária no uso -->
     <TextView
         android:id="@+id/Header"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:text="@string/Welcomer"
+        android:textColor="@color/material_on_background_emphasis_high_type"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="20dp"
@@ -26,11 +29,26 @@
         android:layout_marginStart="10dp"
         android:text="@string/Version"
         android:textSize="13sp"
+        android:textColor="@color/material_on_background_emphasis_high_type"
         android:paddingBottom="3dp"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="@id/Header"
         app:layout_constraintStart_toEndOf="@id/Header" />
 
+    <!-- ImgButton de acesso pra view de configurações do app -->
+    <ImageButton
+        android:id="@+id/Config"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginEnd="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/outline_build"
+        app:tint="?attr/colorOnBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/Header"
+        app:layout_constraintBottom_toBottomOf="@id/Header"/>
+
+    <!-- Scrollview para as 10 opções disponiveis, útil para telefones com telas menores -->
     <ScrollView
         android:id="@+id/MainScroller"
         android:layout_width="match_parent"
@@ -38,17 +56,20 @@
         app:layout_constraintTop_toBottomOf="@id/Header"
         app:layout_constraintBottom_toTopOf="@id/Disclaimer">
 
+        <!-- Uso de layout encadeado no intuito de se comportar como uma lista -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <!-- Botões para cada serviço de emergência -->
             <Button
                 android:id="@+id/PM"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/PM"
                 android:textSize="13sp"
+                android:textColor="@color/material_on_background_emphasis_high_type"
                 android:textAlignment="textStart"
                 android:layout_marginTop="30dp" />
 
@@ -58,6 +79,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/PRF"
                 android:textSize="13sp"
+                android:textColor="@color/material_on_background_emphasis_high_type"
                 android:textAlignment="textStart"
                 app:layout_constraintTop_toBottomOf="@id/PM" />
 
@@ -67,6 +89,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/PRE"
                 android:textSize="13sp"
+                android:textColor="@color/material_on_background_emphasis_high_type"
                 android:textAlignment="textStart"
                 app:layout_constraintTop_toBottomOf="@id/PRF" />
 
@@ -77,6 +100,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/SAMU"
                 android:textSize="13sp"
+                android:textColor="@color/material_on_background_emphasis_high_type"
                 android:textAlignment="textStart"
                 app:layout_constraintTop_toBottomOf="@id/PRE" />
 
@@ -86,6 +110,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/CB"
                 android:textSize="13sp"
+                android:textColor="@color/material_on_background_emphasis_high_type"
                 android:textAlignment="textStart"
                 app:layout_constraintTop_toBottomOf="@id/SAMU" />
 
@@ -95,6 +120,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/DC"
                 android:textSize="13sp"
+                android:textColor="@color/material_on_background_emphasis_high_type"
                 android:textAlignment="textStart"
                 app:layout_constraintTop_toBottomOf="@id/CB" />
 
@@ -104,6 +130,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/CAM"
                 android:textSize="13sp"
+                android:textColor="@color/material_on_background_emphasis_high_type"
                 android:textAlignment="textStart"
                 app:layout_constraintTop_toBottomOf="@id/DC" />
 
@@ -113,6 +140,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/DDH"
                 android:textSize="13sp"
+                android:textColor="@color/material_on_background_emphasis_high_type"
                 android:textAlignment="textStart"
                 app:layout_constraintTop_toBottomOf="@id/CAM" />
 
@@ -122,6 +150,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/PROCON"
                 android:textSize="13sp"
+                android:textColor="@color/material_on_background_emphasis_high_type"
                 android:textAlignment="textStart"
                 app:layout_constraintTop_toBottomOf="@id/DDH" />
 
@@ -131,12 +160,14 @@
                 android:layout_height="wrap_content"
                 android:text="@string/CVV"
                 android:textSize="13sp"
+                android:textColor="@color/material_on_background_emphasis_high_type"
                 android:textAlignment="textStart"
                 app:layout_constraintTop_toBottomOf="@id/PROCON" />
 
         </LinearLayout>
     </ScrollView>
 
+    <!-- Disclaimer de uso -->
     <TextView
         android:id="@+id/Disclaimer"
         android:layout_width="0sp"
@@ -146,6 +177,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:textSize="13sp"
+        android:textColor="@color/material_on_background_emphasis_high_type"
         android:layout_marginTop="12dp"
         android:layout_marginBottom="12dp"
         android:layout_marginStart="20dp"
