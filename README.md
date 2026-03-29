@@ -4,9 +4,18 @@ Aplicativo Android utilitário que centraliza os principais números de emergên
 
 ---
 
+Screenshots
+
+<p>
+  <img src="Screenshot/WhatsApp%20Image%202026-03-22%20at%2016.34.07.jpeg" width="200"/>
+  <img src="Screenshot/WhatsApp%20Image%202026-03-22%20at%2016.34.07%20(1).jpeg" width="200"/>
+  <img src="Screenshot/WhatsApp%20Image%202026-03-22%20at%2016.34.08.jpeg" width="200"/>
+  <img src="Screenshot/WhatsApp%20Image%202026-03-22%20at%2016.34.08%20(1).jpeg" width="200"/>
+</p>
+
 ---
 
-[Changelog de Versões:
+Changelog de Versões:
 
 v1.0	Estrutura inicial com listagem de serviços e discagem rápida
 
